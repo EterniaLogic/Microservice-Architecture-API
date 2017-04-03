@@ -1,0 +1,233 @@
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+        document.ANALYSIS_DATA = ;
+        document.CALLGRAPH = ;
+        </script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "./"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+				
+				<dd><a href="#CheckProfileExists">func CheckProfileExists(ID string) bool</a></dd>
+			
+				
+				<dd><a href="#CreateBlankProfileIfNotExists">func CreateBlankProfileIfNotExists(ID string) bool</a></dd>
+			
+				
+				<dd><a href="#GetUserProfile">func GetUserProfile(w http.ResponseWriter, r *http.Request)</a></dd>
+			
+				
+				<dd><a href="#JSONGetUserProfile">func JSONGetUserProfile(idd interface{}) (response []byte)</a></dd>
+			
+				
+				<dd><a href="#RegisterListener">func RegisterListener(ID string)</a></dd>
+			
+				
+				<dd><a href="#Start">func Start(scanner *common.CommandScanner)</a></dd>
+			
+				
+				<dd><a href="#StartRESTfulServer">func StartRESTfulServer()</a></dd>
+			
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="/src/pkg/target/JSONParser.go">JSONParser.go</a>
+			
+				<a href="/src/pkg/target/RESTfulServer.go">RESTfulServer.go</a>
+			
+				<a href="/src/pkg/target/profile.go">profile.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+                        <p>
+                          In the call graph viewer below, each node
+                          is a function belonging to this package
+                          and its children are the functions it
+                          calls&mdash;perhaps dynamically.
+                        </p>
+                        <p>
+                          The root nodes are the entry points of the
+                          package: functions that may be called from
+                          outside the package.  
+                          There may be non-exported or anonymous
+                          functions among them if they are called
+                          dynamically from another package.
+                        </p>
+                        <p>
+                          Click a node to visit that function's source code.
+                          From there you can visit its callers by
+                          clicking its declaring <code>func</code>
+                          token.
+                        </p>
+                        <p>
+                          Functions may be omitted if they were
+                          determined to be unreachable in the
+                          particular programs or tests that were
+                          analyzed.
+                        </p>
+                        <!-- Zero means show all package entry points. -->
+                        <ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+                        </script>                        
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+		
+		
+			
+			
+			<h2 id="CheckProfileExists">func <a href="/src/pkg/target/profile.go?s=1174:1214#L34">CheckProfileExists</a></h2>
+			<pre>func CheckProfileExists(ID <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#bool">bool</a></pre>
+			<p>
+check if a profile exists
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="CreateBlankProfileIfNotExists">func <a href="/src/pkg/target/profile.go?s=842:893#L22">CreateBlankProfileIfNotExists</a></h2>
+			<pre>func CreateBlankProfileIfNotExists(ID <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#bool">bool</a></pre>
+			<p>
+Check if a profile exists, then create it if it does not exist.
+return true if it did not exist
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="GetUserProfile">func <a href="/src/pkg/target/RESTfulServer.go?s=2277:2336#L52">GetUserProfile</a></h2>
+			<pre>func GetUserProfile(w <a href="/pkg/net/http/">http</a>.<a href="/pkg/net/http/#ResponseWriter">ResponseWriter</a>, r *<a href="/pkg/net/http/">http</a>.<a href="/pkg/net/http/#Request">Request</a>)</pre>
+			<p>
+Handle get Profile
+GET /api/v1/profile/{uid}
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="JSONGetUserProfile">func <a href="/src/pkg/target/JSONParser.go?s=554:611#L22">JSONGetUserProfile</a></h2>
+			<pre>func JSONGetUserProfile(idd interface{}) (response []<a href="/pkg/builtin/#byte">byte</a>)</pre>
+			<p>
+Retrieves a user&#39;s information based on id
+AuthFunc: Function to call to get information
+idd: interface with id value
+typed: JSON return &#34;Type&#34;
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="RegisterListener">func <a href="/src/pkg/target/profile.go?s=667:699#L16">RegisterListener</a></h2>
+			<pre>func RegisterListener(ID <a href="/pkg/builtin/#string">string</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="Start">func <a href="/src/pkg/target/profile.go?s=98:140#L1">Start</a></h2>
+			<pre>func Start(scanner *<a href="/pkg/../../common/">common</a>.<a href="/pkg/../../common/#CommandScanner">CommandScanner</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="StartRESTfulServer">func <a href="/src/pkg/target/RESTfulServer.go?s=172:197#L4">StartRESTfulServer</a></h2>
+			<pre>func StartRESTfulServer()</pre>
+			<p>
+Start up a HTTP server
+</p>
+
+			
+			
+
+		
+		
+	
+
+	
+
+
+
+
+

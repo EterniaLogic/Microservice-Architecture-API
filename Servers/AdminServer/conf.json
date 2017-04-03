@@ -1,0 +1,23 @@
+{
+	"ServerType": "Admin",
+	"_Types": "Admin,Auth,Comment,Feedback,Feeds,Profile,Search,Video",
+	
+	"DBServer": "",
+	"DB": "",
+	"DBTable": "",
+	"DBLoginTable": "",
+	"DBUser": "",
+	"DBPass": "",
+	
+	"NATSCluster": ["nats://a3cqEAdz1om:GOXxG3HamsCZtu2LlEW@sync1i:8080"],
+	"NATSUser": "a3cqEAdz1om",
+	"NATSPass": "GOXxG3HamsCZtu2LlEW",
+	
+	"RESTfulPort": "6100",
+	
+	"_Comment":"Auth Server Only",
+	"LoginTTL": 3600,
+	"MailURL":"",
+	"MailKey":"",
+	"DoEmail":false
+}

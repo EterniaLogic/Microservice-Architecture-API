@@ -1,0 +1,34 @@
+Profile
+
+user profile
+------- PRIVATE --------
+- add/modify first name 	--  MGRW
+- add/modify last name 		--  MGRW
+- add/modify birthdate 		--  MGRW
+- add/modify location
+		- City  			--  MGRW
+		- State  			--  MGRW
+		- Country  			--  MGRW
+- add/modify e-mail address --  MGRW
+- get number of people user is following (feeds service)
+- add/modify gender 		--  MGRW
+------- PUBLIC --------
+- add/modify profile pic	--  MGRW
+- add/modify bio  			--  MGRW
+- get number of users following you (feeds service)
+- add/modify website  		--  MGRW
+- add/modify gear list  	--  MGRW
+- add/modify skype  		--  MGRW
+- add/modify WhatsApp  		--  MGRW
+- add/modify SnapChap  		--  MGRW
+- add/modify Instagram  	--  MGRW
+- add/modify Twitter  		--  MGRW
+- add/modify Facebook  		--  MGRW
+- add/modify Kik  			--  MGRW
+-----------------------
+
+
+Legend
+M*++ - Mysql Column
+*GR+ - Go Read code
+*G+W - Go Put code

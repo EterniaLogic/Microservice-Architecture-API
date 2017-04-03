@@ -1,0 +1,39 @@
+#### Only works for the admin server ####
+# logins are IP-tracked behind the load balancer
+
+====================== Login ======================
+# The administrator/moderator must login first to be able to do anything
+
+[Initial admin login]
+POST /api/v1/admin
+	{"Username":"testuser", "Password":"testpass"}
+		{"Type":"Authentication","ID":"EE0D9E54A92611E5972C04018E7C6601","Token":"81e84a1d425901f50abf45d4fcf6d71f6d1eee129a14f0ea17123bbd","TTL":"1450311379"}
+		{"Type":"Failure", "Message":"Username/Password incorrect!"}
+
+### [Failures for other commands] ###
+	{"Type":"Failure", "Message":"Not logged in!"}
+	{"Type":"Failure", "Message":"Permissions not high enough"}
+	
+
+====================== Users ======================
+## Administrator-level only ##
+
+[Post a new User]
+POST /api/v1/admin/user
+	{"Username":"JohnDoe","UserPass":"test","Email":"johndoe@gmail.com"}
+		{"Type":"Success", "Message":"User created"}
+		{"Type":"Failure", "Message":"User exists"}
+
+
+[Delete a user]
+DELETE /api/v1/admin/user/{uid}
+	{"Username":"JohnDoe","UserPass":"test","Email":"johndoe@gmail.com"}
+		{"Type":"Success", "Message":"User created"}
+		{"Type":"Failure", "Message":"User exists"}
+
+[Modify a user's level]
+	{"UUID":"EE0D9E54A92611E5972C04018E7C6601","Level":"Administrator"}
+		{"Type":"Success", "Message":"User level modified"}
+
+		
+====================== Video Moderation ======================

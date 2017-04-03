@@ -1,0 +1,193 @@
+Endpoints to use, test with Postman
+
+====================== Admin ======================
+
+
+====================== Auth ======================
+Create a user
+POST /api/v1/auth/user
+	{"Username":"JohnDoe","UserPass":"test","Email":"johndoe@gmail.com"}
+                {"Type":"Success", "Message":"User exists"}
+				{"Type":"Failure", "Message":"User exists"}
+
+[Authorization]
+POST /api/v1/auth/user/login
+	{"Username":"JohnDoe","UserPass":"test"}
+			{"Type":"Failure", "Message":"Username/Password incorrect"}
+			{"Type":"Authentication","ID":"EE0D9E54A92611E5972C04018E7C6601","Token":"81e84a1d425901f50abf45d4fcf6d71f6d1eee129a14f0ea17123bbd","TTL":"1450311379"}
+	{"Token":"8eff1b488da7fe3426f9ecaf8de1ba54","Website":"facebook.com","TTL":"1450311379"}
+			{"Type":"Failure", "Message":"Bad OAuth2 Token"}
+			{"Type":"Authentication","ID":"EE0D9E54A92611E5972C04018E7C6601","Token":"81e84a1d425901f50abf45d4fcf6d71f6d1eee129a14f0ea17123bbd","TTL":"1450311379"}
+
+[Logout a user]
+# UID must be the same as the given token and match up, else an error occurs
+DELETE /api/v1/auth/user/login/{uid}
+	{"Type":"Failure", "Message":"User is already logged out"}
+	{"Type":"Failure", "Message":"ID does not exist"}
+	{"Type":"Success", "Message":"User logged out"} 
+
+[Retrieve a username]
+GET /api/v1/auth/user/name/{uid}
+	{"Type":"Failure", "Message":"ID does not exist"}
+	{"Type":"Username", "Value":"JohnDoe"}
+    
+[Retrieve when user has last logged in]
+GET /api/v1/auth/user/lastlogin/{uid}
+	{"Type":"Failure", "Message":"ID does not exist"}
+	{"Type":"LastLogin", "Message":"Dec 10, 2015 5:30 PM"}
+
+[Put a new Oauth2 Token]
+PUT /api/v1/auth/oauth
+	{"OAuth2Token":""}
+		{"Type":"Success", "Message":"Successfully placed OAuth2 Token."}
+		{"Type":"Failure", "Message":"ID does not exist"}
+	
+	
+
+====================== Comment ======================
+[Post a new comment]
+### UUID = Original user ID from auth server
+POST /api/v1/comments
+	{"UUID":"EE0D9E54A92611E5972C04018E7C6601","VID":"EDnAf2w2v-Y","Comment":"I liked this! \"Too awesome!\""}
+		{"Type":"Success", "Message":"Comment created"}
+		{"Type":"Failure", "Message":"Cannot post a comment"}
+		{"Type":"Failure", "Message":"Foul language"}
+
+
+
+====================== Feedback ======================
+POST /api/v1/feedback
+	{"UUID":"EE0D9E54A92611E5972C04018E7C6601","":"Bug", "Title":"Why no workie!","Description":"Videos all borked up!"}
+		{"Type":"Success", "Message":"Feedback added"}
+		{"Type":"Failure", "Message":"Cannot post feedback... bug for reporting bugs?"}
+
+
+====================== Feeds ======================
+[Private info (Requires "gstx" in header)]
+
+# Will found out if the user is logged in, else just displays top N videos
+GET /api/v1/recent/{num}/{tonum}
+	{"Videos": [
+		{"VID":"EDnAf2w2v-Y","Username":"EterniaLogic","Title":"Server stuff","Views":10},
+		{"VID":"HlDMXPDB7pk","Username":"EterniaLogic","Title":"Kerbal stuff","Views":23},
+		{"VID":"mrjpELy1xzc","Username":"EterniaLogic","Title":"More Kerbal stuff","Views":100},
+		{"VID":"rZysX1uRJvU","Username":"EterniaLogic","Title":"Even MOORE Kerbal stuff","Views":15}
+	]}
+
+
+GET /api/v1/recent/follow
+	{"Number":"2",
+	"Following":[
+		"EE0D9E54A92611E5972C04018E7C6601",
+		"EE0D9E54A92611E5972C04018E7C6602"
+	]}
+
+POST /api/v1/recent/follow/EE0D9E54A92611E5972C04018E7C6601
+DELETE /api/v1/recent/follow/EE0D9E54A92611E5972C04018E7C6601
+
+====================== Profile ======================
+All items here are GET or PUT
+
+
+[Private info (Requires "gstx" in header)]
+GET /api/v1/profile/email
+GET /api/v1/profile/firstname
+GET /api/v1/profile/lastname
+GET /api/v1/profile/gender
+GET /api/v1/profile/city
+GET /api/v1/profile/state
+GET /api/v1/profile/country
+
+[Public user info]
+GET /api/v1/profile/picture
+GET /api/v1/profile/bio
+GET /api/v1/profile/facebook
+GET /api/v1/profile/twitter
+GET /api/v1/profile/skype
+GET /api/v1/profile/whatsapp
+GET /api/v1/profile/snapchat
+GET /api/v1/profile/instagram
+GET /api/v1/profile/kik
+GET /api/v1/profile/website
+GET /api/v1/profile/gear
+GET /api/v1/profile/birthday
+
+
+
+====================== Search ======================
+GET /api/v1/search
+	{"Search": "Hello world!"}
+		{"Videos": [
+			{"VID":"EDnAf2w2v-Y"},
+			{"VID":"HlDMXPDB7pk"},
+			{"VID":"mrjpELy1xzc"},
+			{"VID":"rZysX1uRJvU"}
+		]}
+
+GET /api/v1/search/tags/EDnAf2w2v-Y
+	{"Type":"Success", "Message":"fun,times,woohoo!"}
+
+[Put tags require "gstx"]
+PUT /api/v1/search/tags/EDnAf2w2v-Y
+
+
+====================== Video ======================
+
+[Post a new video]
+### VID = youtube video ID
+### UUID = Original user ID from auth server
+
+POST /api/v1/video
+	{"VID":"EDnAf2w2v-Y",
+	"VidLink":"https://www.youtube.com/watch?v=EDnAf2w2v-Y"
+	"UUID":"EE0D9E54A92611E5972C04018E7C6601",
+	"Username":"EterniaLogic",
+	"Description":"Our new offsite storage server will hold 160TB (expandable to 264TB)!",
+	"Longitude":"33º34'57.32\" N", "Latitude":"101º52'42.96\" W","Location":"Lubbock, TX"}
+			{"Type":"Success", "Message":"Video created"}
+			{"Type":"Failure", "Message":"Video could not be created"}
+			{"Type":"Failure", "Message":"Video exists"}
+
+[Get data on a specific video]
+GET /api/v1/video/{vid}
+	{"UUID":"EE0D9E54A92611E5972C04018E7C6601","Title":"Want Safe Data Storage? Get it as Far Away from Me as Possible!","Description":"Our new offsite storage server will hold 160TB (expandable to 264TB)!",
+	"Longitude":"33º34'57.32\" N", "Latitude":"101º52'42.96\" W",
+	"Location":"Lubbock, TX"
+	"Likes":"110","Dislikes":"27554",
+	"Like":true,"Dislike":false,"Sponsored":false,"Views":100410,
+	"date":"1/16/2016 1:45 AM"}
+	
+
+[Modify video description]
+### Must have Token cookie
+PUT /api/v1/video/description
+	{"VID":"EDnAf2w2v-Y","Description":"STUFF"}
+		{"Type":"Success", "Message":"Description modified"}
+		{"Type":"Failure", "Message":"Could not modify description"}
+		{"Type":"Failure", "Message":"Video does not exist"}
+		
+
+[Get top videos based on views]
+# Limit is 100 return items
+GET /api/v1/video/top/{num}/{tonum}
+GET /api/v1/video/top/1/50
+GET /api/v1/video/top/100/200
+	{"Videos": [
+		{"VID":"EDnAf2w2v-Y","Username":"EterniaLogic","Description":"Server stuff","Views":1000,"Date":"1/15/2016 2:03 AM"},
+		{"VID":"HlDMXPDB7pk","Username":"EterniaLogic","Description":"Kerbal stuff","Views":230,"Date":"1/15/2016 2:03 AM"},
+		{"VID":"mrjpELy1xzc","Username":"EterniaLogic","Description":"More Kerbal stuff","Views":100,"Date":"1/15/2011 1:00 PM"},
+		{"VID":"rZysX1uRJvU","Username":"EterniaLogic","Description":"Even MOORE Kerbal stuff","Views":15,"Date":"1/15/2017 1:05 AM"}
+	]}
+	
+
+[Get recent videos]
+# Limit is 100 return items
+GET /api/v1/video/recent/{num}/{tonum}
+GET /api/v1/video/recent/1/50
+GET /api/v1/video/recent/100/200
+	{"Videos": [
+		{"VID":"EDnAf2w2v-Y","Username":"EterniaLogic","Description":"Server stuff","Views":10},
+		{"VID":"HlDMXPDB7pk","Username":"EterniaLogic","Description":"Kerbal stuff","Views":23},
+		{"VID":"mrjpELy1xzc","Username":"EterniaLogic","Description":"More Kerbal stuff","Views":100},
+		{"VID":"rZysX1uRJvU","Username":"EterniaLogic","Description":"Even MOORE Kerbal stuff","Views":15}
+	]}

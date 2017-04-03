@@ -1,0 +1,347 @@
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+        document.ANALYSIS_DATA = ;
+        document.CALLGRAPH = ;
+        </script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "./"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+				
+				<dd><a href="#RESTAdminLogin">func RESTAdminLogin(w http.ResponseWriter, r *http.Request)</a></dd>
+			
+				
+				<dd><a href="#Start">func Start(scanner *common.CommandScanner)</a></dd>
+			
+			
+				
+				<dd><a href="#Admin">type Admin</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#Admin.AddNewUser">func (a Admin) AddNewUser(username string, email string) bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#Admin.ModifyUserLevel">func (a Admin) ModifyUserLevel(UUID string, Level string) bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#Admin.RemoveUser">func (a Admin) RemoveUser(UUID string) bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#Admin.UserLogin">func (a Admin) UserLogin(username string, password string) (uverify bool)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#Admin.VerifyUser">func (a Admin) VerifyUser(ulevel string) bool</a></dd>
+				
+			
+				
+				<dd><a href="#AdminREST">type AdminREST</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewAdminREST">func NewAdminREST() (t AdminREST)</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#AdminREST.AddDelRoute">func (t AdminREST) AddDelRoute(loc string, tfunc func(http.ResponseWriter, *http.Request))</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#AdminREST.AddGetRoute">func (t AdminREST) AddGetRoute(loc string, tfunc func(http.ResponseWriter, *http.Request))</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#AdminREST.AddPostRoute">func (t AdminREST) AddPostRoute(loc string, tfunc func(http.ResponseWriter, *http.Request))</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#AdminREST.AddPutRoute">func (t AdminREST) AddPutRoute(loc string, tfunc func(http.ResponseWriter, *http.Request))</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#AdminREST.Start">func (t AdminREST) Start(port string)</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="/src/pkg/target/Admin.go">Admin.go</a>
+			
+				<a href="/src/pkg/target/AdminREST.go">AdminREST.go</a>
+			
+				<a href="/src/pkg/target/UserAdmin.go">UserAdmin.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+                        <p>
+                          In the call graph viewer below, each node
+                          is a function belonging to this package
+                          and its children are the functions it
+                          calls&mdash;perhaps dynamically.
+                        </p>
+                        <p>
+                          The root nodes are the entry points of the
+                          package: functions that may be called from
+                          outside the package.  
+                          There may be non-exported or anonymous
+                          functions among them if they are called
+                          dynamically from another package.
+                        </p>
+                        <p>
+                          Click a node to visit that function's source code.
+                          From there you can visit its callers by
+                          clicking its declaring <code>func</code>
+                          token.
+                        </p>
+                        <p>
+                          Functions may be omitted if they were
+                          determined to be unreachable in the
+                          particular programs or tests that were
+                          analyzed.
+                        </p>
+                        <!-- Zero means show all package entry points. -->
+                        <ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+                        </script>                        
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+		
+		
+			
+			
+			<h2 id="RESTAdminLogin">func <a href="/src/pkg/target/AdminREST.go?s=1448:1507#L46">RESTAdminLogin</a></h2>
+			<pre>func RESTAdminLogin(w <a href="/pkg/net/http/">http</a>.<a href="/pkg/net/http/#ResponseWriter">ResponseWriter</a>, r *<a href="/pkg/net/http/">http</a>.<a href="/pkg/net/http/#Request">Request</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="Start">func <a href="/src/pkg/target/Admin.go?s=490:532#L13">Start</a></h2>
+			<pre>func Start(scanner *<a href="/pkg/../../common/">common</a>.<a href="/pkg/../../common/#CommandScanner">CommandScanner</a>)</pre>
+			<p>
+Initialize the admin RESTFul server
+</p>
+
+			
+			
+
+		
+		
+			
+			
+			<h2 id="Admin">type <a href="/src/pkg/target/Admin.go?s=173:445#L2">Admin</a></h2>
+			<pre>type Admin struct {
+    UUID         <a href="/pkg/builtin/#string">string</a> <span class="comment">// UUID HEX for the admin</span>
+    Username     <a href="/pkg/builtin/#string">string</a>
+    IP           <a href="/pkg/builtin/#string">string</a> <span class="comment">// IP address for the admin</span>
+    IDToken      <a href="/pkg/builtin/#string">string</a>
+    IsAdmin      <a href="/pkg/builtin/#string">string</a> <span class="comment">// Verified admin</span>
+    UserLevel    <a href="/pkg/builtin/#string">string</a> <span class="comment">// plaintext userlevel</span>
+    UserLevelGen <a href="/pkg/builtin/#string">string</a> <span class="comment">// Generated HEX userlevel</span>
+}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="Admin.AddNewUser">func (Admin) <a href="/src/pkg/target/UserAdmin.go?s=70:132#L1">AddNewUser</a></h3>
+				<pre>func (a <a href="#Admin">Admin</a>) AddNewUser(username <a href="/pkg/builtin/#string">string</a>, email <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#bool">bool</a></pre>
+				<p>
+add a new user
+</p>
+
+				
+				
+			        
+			
+				
+				<h3 id="Admin.ModifyUserLevel">func (Admin) <a href="/src/pkg/target/UserAdmin.go?s=617:680#L20">ModifyUserLevel</a></h3>
+				<pre>func (a <a href="#Admin">Admin</a>) ModifyUserLevel(UUID <a href="/pkg/builtin/#string">string</a>, Level <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#bool">bool</a></pre>
+				<p>
+modify a user&#39;s level
+</p>
+
+				
+				
+			        
+			
+				
+				<h3 id="Admin.RemoveUser">func (Admin) <a href="/src/pkg/target/UserAdmin.go?s=357:401#L8">RemoveUser</a></h3>
+				<pre>func (a <a href="#Admin">Admin</a>) RemoveUser(UUID <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#bool">bool</a></pre>
+				<p>
+remove a user
+</p>
+
+				
+				
+			        
+			
+				
+				<h3 id="Admin.UserLogin">func (Admin) <a href="/src/pkg/target/Admin.go?s=1877:1950#L58">UserLogin</a></h3>
+				<pre>func (a <a href="#Admin">Admin</a>) UserLogin(username <a href="/pkg/builtin/#string">string</a>, password <a href="/pkg/builtin/#string">string</a>) (uverify <a href="/pkg/builtin/#bool">bool</a>)</pre>
+				<p>
+Login the Administrator
+</p>
+
+				
+				
+			        
+			
+				
+				<h3 id="Admin.VerifyUser">func (Admin) <a href="/src/pkg/target/Admin.go?s=1017:1062#L30">VerifyUser</a></h3>
+				<pre>func (a <a href="#Admin">Admin</a>) VerifyUser(ulevel <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#bool">bool</a></pre>
+				<p>
+verify a user&#39;s level on the communication channel
+</p>
+
+				
+				
+			        
+			
+		
+			
+			
+			<h2 id="AdminREST">type <a href="/src/pkg/target/AdminREST.go?s=115:179#L1">AdminREST</a></h2>
+			<pre>type AdminREST struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewAdminREST">func <a href="/src/pkg/target/AdminREST.go?s=183:215#L5">NewAdminREST</a></h3>
+				<pre>func NewAdminREST() (t <a href="#AdminREST">AdminREST</a>)</pre>
+				
+				
+			        
+			
+
+			
+				
+				<h3 id="AdminREST.AddDelRoute">func (AdminREST) <a href="/src/pkg/target/AdminREST.go?s=1133:1223#L34">AddDelRoute</a></h3>
+				<pre>func (t <a href="#AdminREST">AdminREST</a>) AddDelRoute(loc <a href="/pkg/builtin/#string">string</a>, tfunc func(<a href="/pkg/net/http/">http</a>.<a href="/pkg/net/http/#ResponseWriter">ResponseWriter</a>, *<a href="/pkg/net/http/">http</a>.<a href="/pkg/net/http/#Request">Request</a>))</pre>
+				
+				
+				
+			        
+			
+				
+				<h3 id="AdminREST.AddGetRoute">func (AdminREST) <a href="/src/pkg/target/AdminREST.go?s=976:1066#L30">AddGetRoute</a></h3>
+				<pre>func (t <a href="#AdminREST">AdminREST</a>) AddGetRoute(loc <a href="/pkg/builtin/#string">string</a>, tfunc func(<a href="/pkg/net/http/">http</a>.<a href="/pkg/net/http/#ResponseWriter">ResponseWriter</a>, *<a href="/pkg/net/http/">http</a>.<a href="/pkg/net/http/#Request">Request</a>))</pre>
+				
+				
+				
+			        
+			
+				
+				<h3 id="AdminREST.AddPostRoute">func (AdminREST) <a href="/src/pkg/target/AdminREST.go?s=817:908#L26">AddPostRoute</a></h3>
+				<pre>func (t <a href="#AdminREST">AdminREST</a>) AddPostRoute(loc <a href="/pkg/builtin/#string">string</a>, tfunc func(<a href="/pkg/net/http/">http</a>.<a href="/pkg/net/http/#ResponseWriter">ResponseWriter</a>, *<a href="/pkg/net/http/">http</a>.<a href="/pkg/net/http/#Request">Request</a>))</pre>
+				
+				
+				
+			        
+			
+				
+				<h3 id="AdminREST.AddPutRoute">func (AdminREST) <a href="/src/pkg/target/AdminREST.go?s=660:750#L22">AddPutRoute</a></h3>
+				<pre>func (t <a href="#AdminREST">AdminREST</a>) AddPutRoute(loc <a href="/pkg/builtin/#string">string</a>, tfunc func(<a href="/pkg/net/http/">http</a>.<a href="/pkg/net/http/#ResponseWriter">ResponseWriter</a>, *<a href="/pkg/net/http/">http</a>.<a href="/pkg/net/http/#Request">Request</a>))</pre>
+				
+				
+				
+			        
+			
+				
+				<h3 id="AdminREST.Start">func (AdminREST) <a href="/src/pkg/target/AdminREST.go?s=1293:1330#L38">Start</a></h3>
+				<pre>func (t <a href="#AdminREST">AdminREST</a>) Start(port <a href="/pkg/builtin/#string">string</a>)</pre>
+				
+				
+				
+			        
+			
+		
+	
+
+	
+
+
+
+
+

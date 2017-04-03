@@ -1,0 +1,480 @@
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+        document.ANALYSIS_DATA = ;
+        document.CALLGRAPH = ;
+        </script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "./"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+				
+				<dd><a href="#AuthLogout">func AuthLogout(id string)</a></dd>
+			
+				
+				<dd><a href="#AuthRegister">func AuthRegister(uname string, password string, email string) (msg string, err bool)</a></dd>
+			
+				
+				<dd><a href="#AuthSendVerificationEmail">func AuthSendVerificationEmail(UUID string, email string)</a></dd>
+			
+				
+				<dd><a href="#AuthUser">func AuthUser(uname string, passwd string, prehash bool) (id string, idtoken string, msg string, err bool)</a></dd>
+			
+				
+				<dd><a href="#AuthUserAccepted">func AuthUserAccepted(UUID string, auth_level string, auth_level_gen string) (id string, idtoken string)</a></dd>
+			
+				
+				<dd><a href="#AuthUserExists">func AuthUserExists(uname string) bool</a></dd>
+			
+				
+				<dd><a href="#AuthVerifyUserLevel">func AuthVerifyUserLevel(id string, wanted string, hashed string) (msg string, err bool)</a></dd>
+			
+				
+				<dd><a href="#CheckAuthLevel">func CheckAuthLevel(id string, authlv string, authgen string) (string, string)</a></dd>
+			
+				
+				<dd><a href="#InitSubscribeNAT">func InitSubscribeNAT()</a></dd>
+			
+				
+				<dd><a href="#JSONDeAuth">func JSONDeAuth(i interface{}) (response []byte)</a></dd>
+			
+				
+				<dd><a href="#JSONGetUserProfile">func JSONGetUserProfile(idd interface{}) (response []byte)</a></dd>
+			
+				
+				<dd><a href="#JSONPackageLogin">func JSONPackageLogin(id string, token string, msg string, err bool) (response []byte)</a></dd>
+			
+				
+				<dd><a href="#JSONtoMap">func JSONtoMap(JSON string) (out map[string]interface{}, err bool)</a></dd>
+			
+				
+				<dd><a href="#OAuthUser">func OAuthUser(id string, secret string, website string) (idret string, idtoken string, msg string, err bool)</a></dd>
+			
+				
+				<dd><a href="#Start">func Start(scanner *common.CommandScanner)</a></dd>
+			
+				
+				<dd><a href="#StartRESTfulServer">func StartRESTfulServer()</a></dd>
+			
+				
+				<dd><a href="#UserCreate">func UserCreate(w http.ResponseWriter, r *http.Request)</a></dd>
+			
+				
+				<dd><a href="#UserLogin">func UserLogin(w http.ResponseWriter, r *http.Request)</a></dd>
+			
+				
+				<dd><a href="#UserLogout">func UserLogout(w http.ResponseWriter, r *http.Request)</a></dd>
+			
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="/src/pkg/target/JSONParser.go">JSONParser.go</a>
+			
+				<a href="/src/pkg/target/RESTfulServer.go">RESTfulServer.go</a>
+			
+				<a href="/src/pkg/target/auth.go">auth.go</a>
+			
+				<a href="/src/pkg/target/authNAT.go">authNAT.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+                        <p>
+                          In the call graph viewer below, each node
+                          is a function belonging to this package
+                          and its children are the functions it
+                          calls&mdash;perhaps dynamically.
+                        </p>
+                        <p>
+                          The root nodes are the entry points of the
+                          package: functions that may be called from
+                          outside the package.  
+                          There may be non-exported or anonymous
+                          functions among them if they are called
+                          dynamically from another package.
+                        </p>
+                        <p>
+                          Click a node to visit that function's source code.
+                          From there you can visit its callers by
+                          clicking its declaring <code>func</code>
+                          token.
+                        </p>
+                        <p>
+                          Functions may be omitted if they were
+                          determined to be unreachable in the
+                          particular programs or tests that were
+                          analyzed.
+                        </p>
+                        <!-- Zero means show all package entry points. -->
+                        <ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+                        </script>                        
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+		
+		
+			
+			
+			<h2 id="AuthLogout">func <a href="/src/pkg/target/auth.go?s=8211:8237#L252">AuthLogout</a></h2>
+			<pre>func AuthLogout(id <a href="/pkg/builtin/#string">string</a>)</pre>
+			<p>
+AuthLogout will log a user out
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="AuthRegister">func <a href="/src/pkg/target/auth.go?s=4980:5064#L157">AuthRegister</a></h2>
+			<pre>func AuthRegister(uname <a href="/pkg/builtin/#string">string</a>, password <a href="/pkg/builtin/#string">string</a>, email <a href="/pkg/builtin/#string">string</a>) (msg <a href="/pkg/builtin/#string">string</a>, err <a href="/pkg/builtin/#bool">bool</a>)</pre>
+			<p>
+Create a new user
+returns:
+</p>
+<pre>uname - username to create
+password - plaintext or hashed password
+msg - eror message output
+err - true if an error has occured
+</pre>
+
+			
+			
+
+		
+			
+			
+			<h2 id="AuthSendVerificationEmail">func <a href="/src/pkg/target/auth.go?s=6236:6293#L191">AuthSendVerificationEmail</a></h2>
+			<pre>func AuthSendVerificationEmail(UUID <a href="/pkg/builtin/#string">string</a>, email <a href="/pkg/builtin/#string">string</a>)</pre>
+			<p>
+Create a new user
+Inputs:
+</p>
+<pre>UUID - User ID
+email - unverified user to send email to
+</pre>
+
+			
+			
+
+		
+			
+			
+			<h2 id="AuthUser">func <a href="/src/pkg/target/auth.go?s=928:1033#L31">AuthUser</a></h2>
+			<pre>func AuthUser(uname <a href="/pkg/builtin/#string">string</a>, passwd <a href="/pkg/builtin/#string">string</a>, prehash <a href="/pkg/builtin/#bool">bool</a>) (id <a href="/pkg/builtin/#string">string</a>, idtoken <a href="/pkg/builtin/#string">string</a>, msg <a href="/pkg/builtin/#string">string</a>, err <a href="/pkg/builtin/#bool">bool</a>)</pre>
+			<p>
+Authenticate a Direct user
+username, password direct
+returns:
+</p>
+<pre>UserID - database id (1-N)
+idtoken - Passed to client for seamless pages
+msg - eror message output
+err - true if an error has occured
+</pre>
+
+			
+			
+
+		
+			
+			
+			<h2 id="AuthUserAccepted">func <a href="/src/pkg/target/auth.go?s=3825:3929#L120">AuthUserAccepted</a></h2>
+			<pre>func AuthUserAccepted(UUID <a href="/pkg/builtin/#string">string</a>, auth_level <a href="/pkg/builtin/#string">string</a>, auth_level_gen <a href="/pkg/builtin/#string">string</a>) (id <a href="/pkg/builtin/#string">string</a>, idtoken <a href="/pkg/builtin/#string">string</a>)</pre>
+			<p>
+id and secret are privided by a website.
+the website is: google.com, facebook.com
+requires:
+</p>
+<pre>UUID - user id string
+</pre>
+<p>
+returns:
+</p>
+<pre>     idtoken - generated token
+		id - UUID
+</pre>
+
+			
+			
+
+		
+			
+			
+			<h2 id="AuthUserExists">func <a href="/src/pkg/target/auth.go?s=4470:4508#L138">AuthUserExists</a></h2>
+			<pre>func AuthUserExists(uname <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#bool">bool</a></pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="AuthVerifyUserLevel">func <a href="/src/pkg/target/auth.go?s=6955:7042#L214">AuthVerifyUserLevel</a></h2>
+			<pre>func AuthVerifyUserLevel(id <a href="/pkg/builtin/#string">string</a>, wanted <a href="/pkg/builtin/#string">string</a>, hashed <a href="/pkg/builtin/#string">string</a>) (msg <a href="/pkg/builtin/#string">string</a>, err <a href="/pkg/builtin/#bool">bool</a>)</pre>
+			<p>
+Verify a user&#39;s level
+returns:
+</p>
+<pre>id - uid from the original login
+wanted - level that the user wants ie: &#34;Administrator&#34;, &#34;User&#34;
+hashed - hashed user level that is given with GetUserLevel
+msg - output error if UID doesnt exist
+err - true if an error has occured
+</pre>
+
+			
+			
+
+		
+			
+			
+			<h2 id="CheckAuthLevel">func <a href="/src/pkg/target/auth.go?s=8830:8907#L272">CheckAuthLevel</a></h2>
+			<pre>func CheckAuthLevel(id <a href="/pkg/builtin/#string">string</a>, authlv <a href="/pkg/builtin/#string">string</a>, authgen <a href="/pkg/builtin/#string">string</a>) (<a href="/pkg/builtin/#string">string</a>, <a href="/pkg/builtin/#string">string</a>)</pre>
+			<p>
+get verified Auth Level of the user on the tables
+if it is not correct, auto-patch it to &#34;User&#34; on the database
+returns:
+</p>
+<pre>id - generated
+authlv -
+authgen -
+</pre>
+<p>
+outputs:
+</p>
+<pre>new authlv (if changed)
+new authgen (if changed)
+</pre>
+
+			
+			
+
+		
+			
+			
+			<h2 id="InitSubscribeNAT">func <a href="/src/pkg/target/authNAT.go?s=41:64#L1">InitSubscribeNAT</a></h2>
+			<pre>func InitSubscribeNAT()</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="JSONDeAuth">func <a href="/src/pkg/target/JSONParser.go?s=518:565#L17">JSONDeAuth</a></h2>
+			<pre>func JSONDeAuth(i interface{}) (response []<a href="/pkg/builtin/#byte">byte</a>)</pre>
+			<p>
+logs out a user by taking in an ID response is in JSON
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="JSONGetUserProfile">func <a href="/src/pkg/target/JSONParser.go?s=886:943#L31">JSONGetUserProfile</a></h2>
+			<pre>func JSONGetUserProfile(idd interface{}) (response []<a href="/pkg/builtin/#byte">byte</a>)</pre>
+			<p>
+Retrieves a user&#39;s information based on id
+AuthFunc: Function to call to get information
+idd: interface with id value
+typed: JSON return &#34;Type&#34;
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="JSONPackageLogin">func <a href="/src/pkg/target/JSONParser.go?s=2241:2326#L70">JSONPackageLogin</a></h2>
+			<pre>func JSONPackageLogin(id <a href="/pkg/builtin/#string">string</a>, token <a href="/pkg/builtin/#string">string</a>, msg <a href="/pkg/builtin/#string">string</a>, err <a href="/pkg/builtin/#bool">bool</a>) (response []<a href="/pkg/builtin/#byte">byte</a>)</pre>
+			<p>
+Used to output login verification and fail modes to the RESTful client
+Inputs:
+</p>
+<pre>id - user&#39;s id to be sent
+token - user&#39;s token to be sent
+msg - taken in from the AuthLogin request
+err - error from authlogin
+</pre>
+<p>
+Outputs:
+</p>
+<pre>response - JSON response to the RESTful client
+</pre>
+
+			
+			
+
+		
+			
+			
+			<h2 id="JSONtoMap">func <a href="/src/pkg/target/JSONParser.go?s=172:236#L3">JSONtoMap</a></h2>
+			<pre>func JSONtoMap(JSON <a href="/pkg/builtin/#string">string</a>) (out map[<a href="/pkg/builtin/#string">string</a>]interface{}, err <a href="/pkg/builtin/#bool">bool</a>)</pre>
+			<p>
+convert a json string to a string map interface
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="OAuthUser">func <a href="/src/pkg/target/auth.go?s=3126:3234#L87">OAuthUser</a></h2>
+			<pre>func OAuthUser(id <a href="/pkg/builtin/#string">string</a>, secret <a href="/pkg/builtin/#string">string</a>, website <a href="/pkg/builtin/#string">string</a>) (idret <a href="/pkg/builtin/#string">string</a>, idtoken <a href="/pkg/builtin/#string">string</a>, msg <a href="/pkg/builtin/#string">string</a>, err <a href="/pkg/builtin/#bool">bool</a>)</pre>
+			<p>
+id and secret are privided by a website.
+the website is: google.com, facebook.com
+returns:
+</p>
+<pre>UserID - database id (1-N)
+idtoken - Passed to client for seamless pages
+msg - eror message output
+err - true if an error has occured
+</pre>
+
+			
+			
+
+		
+			
+			
+			<h2 id="Start">func <a href="/src/pkg/target/auth.go?s=241:283#L5">Start</a></h2>
+			<pre>func Start(scanner *<a href="/pkg/../../common/">common</a>.<a href="/pkg/../../common/#CommandScanner">CommandScanner</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="StartRESTfulServer">func <a href="/src/pkg/target/RESTfulServer.go?s=181:206#L4">StartRESTfulServer</a></h2>
+			<pre>func StartRESTfulServer()</pre>
+			<p>
+Start up a HTTP server
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="UserCreate">func <a href="/src/pkg/target/RESTfulServer.go?s=1386:1441#L38">UserCreate</a></h2>
+			<pre>func UserCreate(w <a href="/pkg/net/http/">http</a>.<a href="/pkg/net/http/#ResponseWriter">ResponseWriter</a>, r *<a href="/pkg/net/http/">http</a>.<a href="/pkg/net/http/#Request">Request</a>)</pre>
+			<p>
+create a user with JSON
+POST /api/v1/auth/user
+{&#34;Username&#34;:&#34;JohnDoe&#34;,&#34;UserPass&#34;:&#34;test&#34;,&#34;Email&#34;:&#34;johndoe@gmail.com&#34;}
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="UserLogin">func <a href="/src/pkg/target/RESTfulServer.go?s=2393:2447#L63">UserLogin</a></h2>
+			<pre>func UserLogin(w <a href="/pkg/net/http/">http</a>.<a href="/pkg/net/http/#ResponseWriter">ResponseWriter</a>, r *<a href="/pkg/net/http/">http</a>.<a href="/pkg/net/http/#Request">Request</a>)</pre>
+			<p>
+Handle login user
+POST /api/v1/auth/user/login
+{&#34;Username&#34;:&#34;JohnDoe&#34;,&#34;UserPass&#34;:&#34;test&#34;}
+{&#34;ID&#34;:&#34;95341411595&#34;,&#34;Token&#34;:&#34;8eff1b488da7fe3426f9ecaf8de1ba54&#34;,&#34;Website&#34;:&#34;facebook.com&#34;}
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="UserLogout">func <a href="/src/pkg/target/RESTfulServer.go?s=3672:3727#L97">UserLogout</a></h2>
+			<pre>func UserLogout(w <a href="/pkg/net/http/">http</a>.<a href="/pkg/net/http/#ResponseWriter">ResponseWriter</a>, r *<a href="/pkg/net/http/">http</a>.<a href="/pkg/net/http/#Request">Request</a>)</pre>
+			<p>
+Handle logout a user
+DELETE /api/v1/auth/login/{uid}
+</p>
+
+			
+			
+
+		
+		
+	
+
+	
+
+
+
+
+

@@ -1,0 +1,1517 @@
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+        document.ANALYSIS_DATA = ;
+        document.CALLGRAPH = ;
+        </script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "./"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+				<dd><a href="#pkg-subdirectories">Subdirectories</a></dd>
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+				
+				<dd><a href="#AddTables">func AddTables()</a></dd>
+			
+				
+				<dd><a href="#AsyncLogger">func AsyncLogger(fileloc string, dofile bool)</a></dd>
+			
+				
+				<dd><a href="#AsyncPrintln">func AsyncPrintln(i string)</a></dd>
+			
+				
+				<dd><a href="#CheckDBUserLoginTTL">func CheckDBUserLoginTTL(dofunct interface{})</a></dd>
+			
+				
+				<dd><a href="#CheckUserHasAuthority">func CheckUserHasAuthority(ID string, WantedLevel string) bool</a></dd>
+			
+				
+				<dd><a href="#ClearCommand">func ClearCommand(args []string)</a></dd>
+			
+				
+				<dd><a href="#CloseDB">func CloseDB()</a></dd>
+			
+				
+				<dd><a href="#CloseLogToFile">func CloseLogToFile()</a></dd>
+			
+				
+				<dd><a href="#CloseNATSClient">func CloseNATSClient()</a></dd>
+			
+				
+				<dd><a href="#ConfirmUserLevel">func ConfirmUserLevel(id string, wantedLevel string, hashLevel string) bool</a></dd>
+			
+				
+				<dd><a href="#ConvertStringToLevel">func ConvertStringToLevel(authlevel string) int</a></dd>
+			
+				
+				<dd><a href="#DateNowSQL">func DateNowSQL() string</a></dd>
+			
+				
+				<dd><a href="#DecryptID">func DecryptID(id string) (idenc string)</a></dd>
+			
+				
+				<dd><a href="#EncryptID">func EncryptID(id string) (idenc string)</a></dd>
+			
+				
+				<dd><a href="#ExitCommand">func ExitCommand(args []string)</a></dd>
+			
+				
+				<dd><a href="#GenAuthLevel">func GenAuthLevel(authlevel string, id string) string</a></dd>
+			
+				
+				<dd><a href="#GenRandString">func GenRandString() string</a></dd>
+			
+				
+				<dd><a href="#GetDB">func GetDB() *sql.DB</a></dd>
+			
+				
+				<dd><a href="#GetDBGorp">func GetDBGorp() *gorp.DbMap</a></dd>
+			
+				
+				<dd><a href="#GetIDFromToken">func GetIDFromToken(Token string) string</a></dd>
+			
+				
+				<dd><a href="#GetMailer">func GetMailer() mailgun.Mailgun</a></dd>
+			
+				
+				<dd><a href="#GetNATSClientJSON">func GetNATSClientJSON() *nats.EncodedConn</a></dd>
+			
+				
+				<dd><a href="#GetNATSClientNoJSON">func GetNATSClientNoJSON() *nats.EncodedConn</a></dd>
+			
+				
+				<dd><a href="#GetRowColumn">func GetRowColumn(table string, id string, column string) (output string, err bool)</a></dd>
+			
+				
+				<dd><a href="#GetRowColumnNE">func GetRowColumnNE(table string, id string, column string) string</a></dd>
+			
+				
+				<dd><a href="#GetRowColumnWhere">func GetRowColumnWhere(table string, wherecolumn string, where string, column string) (output string)</a></dd>
+			
+				
+				<dd><a href="#GetTokenFromID">func GetTokenFromID(ID string) string</a></dd>
+			
+				
+				<dd><a href="#InitMailer">func InitMailer()</a></dd>
+			
+				
+				<dd><a href="#InitUserManager">func InitUserManager()</a></dd>
+			
+				
+				<dd><a href="#IsUserLoggedIn">func IsUserLoggedIn(ID string) bool</a></dd>
+			
+				
+				<dd><a href="#JSONGetIDColumn">func JSONGetIDColumn(table string, idd interface{}, sqlcolumn string, typed string) (response []byte)</a></dd>
+			
+				
+				<dd><a href="#JSONPackageMessage">func JSONPackageMessage(successmsg string, msg string, err bool) (response []byte)</a></dd>
+			
+				
+				<dd><a href="#JSONtoMap">func JSONtoMap(JSON string) (out map[string]interface{}, err bool)</a></dd>
+			
+				
+				<dd><a href="#ListenToLogin">func ListenToLogin(f interface{})</a></dd>
+			
+				
+				<dd><a href="#ListenToLogout">func ListenToLogout(f interface{})</a></dd>
+			
+				
+				<dd><a href="#ListenToRegister">func ListenToRegister(f interface{})</a></dd>
+			
+				
+				<dd><a href="#LogToFile">func LogToFile(fileloc string, dofile bool)</a></dd>
+			
+				
+				<dd><a href="#OnClose">func OnClose()</a></dd>
+			
+				
+				<dd><a href="#OnExit">func OnExit()</a></dd>
+			
+				
+				<dd><a href="#OpenDB">func OpenDB(db_user string, db_pass string, db_schema string, db_connect string)</a></dd>
+			
+				
+				<dd><a href="#OpenDBCFG">func OpenDBCFG()</a></dd>
+			
+				
+				<dd><a href="#PassSum">func PassSum(pass string) string</a></dd>
+			
+				
+				<dd><a href="#PreSum">func PreSum(pass string) string</a></dd>
+			
+				
+				<dd><a href="#ProfilingRouterHandler">func ProfilingRouterHandler(router *mux.Router)</a></dd>
+			
+				
+				<dd><a href="#RESTFulGet">func RESTFulGet(w http.ResponseWriter, r *http.Request, table string, column string, jsontag string)</a></dd>
+			
+				
+				<dd><a href="#RESTFulGetMux">func RESTFulGetMux(w http.ResponseWriter, r *http.Request, muxr string, table string, column string, jsontag string)</a></dd>
+			
+				
+				<dd><a href="#RESTFulGetPut">func RESTFulGetPut(router *mux.Router, prefix string, route string, dbcolumn string, JSONkey string)</a></dd>
+			
+				
+				<dd><a href="#RESTFulGetPutMux">func RESTFulGetPutMux(router *mux.Router, mux string, byIDcolumn string, prefix string, route string, dbcolumn string, JSONkey string)</a></dd>
+			
+				
+				<dd><a href="#RESTFulPut">func RESTFulPut(w http.ResponseWriter, r *http.Request, table string, column string, jsonindex string)</a></dd>
+			
+				
+				<dd><a href="#RESTFulPutMux">func RESTFulPutMux(w http.ResponseWriter, r *http.Request, mux string, table string, column string, jsonindex string)</a></dd>
+			
+				
+				<dd><a href="#RowExists">func RowExists(ID string, COL string, PREFIX string) bool</a></dd>
+			
+				
+				<dd><a href="#RowExists2">func RowExists2(ID string, COL string, ID2 string, COL2 string, PREFIX string) bool</a></dd>
+			
+				
+				<dd><a href="#SecureConnector">func SecureConnector(serverURLs []string) *nats.Conn</a></dd>
+			
+				
+				<dd><a href="#SetConfig">func SetConfig(fileloc string)</a></dd>
+			
+				
+				<dd><a href="#StartNATSClient">func StartNATSClient(servers []string, username string, pass string) *nats.EncodedConn</a></dd>
+			
+				
+				<dd><a href="#StartNATSClientCFG">func StartNATSClientCFG()</a></dd>
+			
+				
+				<dd><a href="#TestJSONInput">func TestJSONInput(data interface{}, msg string) (response interface{})</a></dd>
+			
+				
+				<dd><a href="#UserLoginCheck">func UserLoginCheck(loginmsg *AuthLogin)</a></dd>
+			
+				
+				<dd><a href="#UserLogoutCheck">func UserLogoutCheck(ID string)</a></dd>
+			
+				
+				<dd><a href="#UserRegisterCheck">func UserRegisterCheck(ID string)</a></dd>
+			
+			
+				
+				<dd><a href="#Admin">type Admin</a></dd>
+				
+				
+			
+				
+				<dd><a href="#AuthLogin">type AuthLogin</a></dd>
+				
+				
+			
+				
+				<dd><a href="#AuthVerifyLevelMsg">type AuthVerifyLevelMsg</a></dd>
+				
+				
+			
+				
+				<dd><a href="#AuthVerifyLevelRetMsg">type AuthVerifyLevelRetMsg</a></dd>
+				
+				
+			
+				
+				<dd><a href="#Authentication">type Authentication</a></dd>
+				
+				
+			
+				
+				<dd><a href="#CommandExec">type CommandExec</a></dd>
+				
+				
+			
+				
+				<dd><a href="#CommandScanner">type CommandScanner</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#InitCommandScanner">func InitCommandScanner() *CommandScanner</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#CommandScanner.AddCommand">func (c CommandScanner) AddCommand(com string, funct func([]string))</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#CommandScanner.ScanLoop">func (c CommandScanner) ScanLoop()</a></dd>
+				
+			
+				
+				<dd><a href="#Configuration">type Configuration</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#GetConfig">func GetConfig() Configuration</a></dd>
+				
+				
+			
+				
+				<dd><a href="#MsgData">type MsgData</a></dd>
+				
+				
+			
+				
+				<dd><a href="#UserLevel">type UserLevel</a></dd>
+				
+				
+			
+				
+				<dd><a href="#UserProfile">type UserProfile</a></dd>
+				
+				
+			
+				
+				<dd><a href="#ValueX">type ValueX</a></dd>
+				
+				
+			
+				
+				<dd><a href="#VerifyAdmin">type VerifyAdmin</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="/src/pkg/target/CommandScanner.go">CommandScanner.go</a>
+			
+				<a href="/src/pkg/target/Config.go">Config.go</a>
+			
+				<a href="/src/pkg/target/FileLogger.go">FileLogger.go</a>
+			
+				<a href="/src/pkg/target/GenericJSON.go">GenericJSON.go</a>
+			
+				<a href="/src/pkg/target/JSONTypes.go">JSONTypes.go</a>
+			
+				<a href="/src/pkg/target/Profiling.go">Profiling.go</a>
+			
+				<a href="/src/pkg/target/RESTFul.go">RESTFul.go</a>
+			
+				<a href="/src/pkg/target/common.go">common.go</a>
+			
+				<a href="/src/pkg/target/crypto.go">crypto.go</a>
+			
+				<a href="/src/pkg/target/db.go">db.go</a>
+			
+				<a href="/src/pkg/target/mail.go">mail.go</a>
+			
+				<a href="/src/pkg/target/nats_client.go">nats_client.go</a>
+			
+				<a href="/src/pkg/target/usermanager.go">usermanager.go</a>
+			
+				<a href="/src/pkg/target/utils.go">utils.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+                        <p>
+                          In the call graph viewer below, each node
+                          is a function belonging to this package
+                          and its children are the functions it
+                          calls&mdash;perhaps dynamically.
+                        </p>
+                        <p>
+                          The root nodes are the entry points of the
+                          package: functions that may be called from
+                          outside the package.  
+                          There may be non-exported or anonymous
+                          functions among them if they are called
+                          dynamically from another package.
+                        </p>
+                        <p>
+                          Click a node to visit that function's source code.
+                          From there you can visit its callers by
+                          clicking its declaring <code>func</code>
+                          token.
+                        </p>
+                        <p>
+                          Functions may be omitted if they were
+                          determined to be unreachable in the
+                          particular programs or tests that were
+                          analyzed.
+                        </p>
+                        <!-- Zero means show all package entry points. -->
+                        <ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+                        </script>                        
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+		
+		
+			
+			
+			<h2 id="AddTables">func <a href="/src/pkg/target/db.go?s=1199:1215#L46">AddTables</a></h2>
+			<pre>func AddTables()</pre>
+			<p>
+Add tables if they do not exist based on the config
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="AsyncLogger">func <a href="/src/pkg/target/FileLogger.go?s=312:357#L12">AsyncLogger</a></h2>
+			<pre>func AsyncLogger(fileloc <a href="/pkg/builtin/#string">string</a>, dofile <a href="/pkg/builtin/#bool">bool</a>)</pre>
+			<p>
+thread that logs to file over time
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="AsyncPrintln">func <a href="/src/pkg/target/FileLogger.go?s=222:249#L7">AsyncPrintln</a></h2>
+			<pre>func AsyncPrintln(i <a href="/pkg/builtin/#string">string</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="CheckDBUserLoginTTL">func <a href="/src/pkg/target/usermanager.go?s=1022:1067#L28">CheckDBUserLoginTTL</a></h2>
+			<pre>func CheckDBUserLoginTTL(dofunct interface{})</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="CheckUserHasAuthority">func <a href="/src/pkg/target/usermanager.go?s=3770:3833#L122">CheckUserHasAuthority</a></h2>
+			<pre>func CheckUserHasAuthority(ID <a href="/pkg/builtin/#string">string</a>, WantedLevel <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#bool">bool</a></pre>
+			<p>
+Checks if the specified user can do something at that level
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="ClearCommand">func <a href="/src/pkg/target/CommandScanner.go?s=1446:1478#L60">ClearCommand</a></h2>
+			<pre>func ClearCommand(args []<a href="/pkg/builtin/#string">string</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="CloseDB">func <a href="/src/pkg/target/db.go?s=6463:6477#L153">CloseDB</a></h2>
+			<pre>func CloseDB()</pre>
+			<p>
+close the database
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="CloseLogToFile">func <a href="/src/pkg/target/FileLogger.go?s=681:702#L30">CloseLogToFile</a></h2>
+			<pre>func CloseLogToFile()</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="CloseNATSClient">func <a href="/src/pkg/target/nats_client.go?s=1541:1563#L53">CloseNATSClient</a></h2>
+			<pre>func CloseNATSClient()</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="ConfirmUserLevel">func <a href="/src/pkg/target/nats_client.go?s=1072:1148#L36">ConfirmUserLevel</a></h2>
+			<pre>func ConfirmUserLevel(id <a href="/pkg/builtin/#string">string</a>, wantedLevel <a href="/pkg/builtin/#string">string</a>, hashLevel <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#bool">bool</a></pre>
+			<p>
+send confirmation for user level to the server
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="ConvertStringToLevel">func <a href="/src/pkg/target/utils.go?s=2417:2464#L71">ConvertStringToLevel</a></h2>
+			<pre>func ConvertStringToLevel(authlevel <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#int">int</a></pre>
+			<p>
+Quantify the user level
+if it is not correct, auto-patch it to &#34;User&#34; on the database
+returns:
+</p>
+<pre>authlevel - textual level ie: &#34;Administrator&#34;, &#34;User&#34;
+int - quantified user level
+</pre>
+
+			
+			
+
+		
+			
+			
+			<h2 id="DateNowSQL">func <a href="/src/pkg/target/utils.go?s=2133:2157#L62">DateNowSQL</a></h2>
+			<pre>func DateNowSQL() <a href="/pkg/builtin/#string">string</a></pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="DecryptID">func <a href="/src/pkg/target/crypto.go?s=1876:1915#L59">DecryptID</a></h2>
+			<pre>func DecryptID(id <a href="/pkg/builtin/#string">string</a>) (idenc <a href="/pkg/builtin/#string">string</a>)</pre>
+			<p>
+Encrypt and ID with AES-256
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="EncryptID">func <a href="/src/pkg/target/crypto.go?s=1626:1665#L49">EncryptID</a></h2>
+			<pre>func EncryptID(id <a href="/pkg/builtin/#string">string</a>) (idenc <a href="/pkg/builtin/#string">string</a>)</pre>
+			<p>
+Encrypt and ID with AES-256
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="ExitCommand">func <a href="/src/pkg/target/CommandScanner.go?s=1395:1426#L56">ExitCommand</a></h2>
+			<pre>func ExitCommand(args []<a href="/pkg/builtin/#string">string</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="GenAuthLevel">func <a href="/src/pkg/target/utils.go?s=206:259#L7">GenAuthLevel</a></h2>
+			<pre>func GenAuthLevel(authlevel <a href="/pkg/builtin/#string">string</a>, id <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#string">string</a></pre>
+			<p>
+Generate an auth level
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="GenRandString">func <a href="/src/pkg/target/utils.go?s=1735:1762#L50">GenRandString</a></h2>
+			<pre>func GenRandString() <a href="/pkg/builtin/#string">string</a></pre>
+			<p>
+<a href="http://stackoverflow.com/questions/22892120/how-to-generate-a-random-string-of-a-fixed-length-in-golang">http://stackoverflow.com/questions/22892120/how-to-generate-a-random-string-of-a-fixed-length-in-golang</a>
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="GetDB">func <a href="/src/pkg/target/db.go?s=6354:6375#L144">GetDB</a></h2>
+			<pre>func GetDB() *<a href="/pkg/database/sql/">sql</a>.<a href="/pkg/database/sql/#DB">DB</a></pre>
+			<p>
+returns the database reference
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="GetDBGorp">func <a href="/src/pkg/target/db.go?s=6392:6421#L148">GetDBGorp</a></h2>
+			<pre>func GetDBGorp() *gorp.<a href="#DbMap">DbMap</a></pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="GetIDFromToken">func <a href="/src/pkg/target/usermanager.go?s=2035:2076#L68">GetIDFromToken</a></h2>
+			<pre>func GetIDFromToken(Token <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#string">string</a></pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="GetMailer">func <a href="/src/pkg/target/mail.go?s=242:275#L3">GetMailer</a></h2>
+			<pre>func GetMailer() mailgun.<a href="#Mailgun">Mailgun</a></pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="GetNATSClientJSON">func <a href="/src/pkg/target/nats_client.go?s=1407:1450#L45">GetNATSClientJSON</a></h2>
+			<pre>func GetNATSClientJSON() *<a href="/pkg/github.com/nats-io/nats/">nats</a>.<a href="/pkg/github.com/nats-io/nats/#EncodedConn">EncodedConn</a></pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="GetNATSClientNoJSON">func <a href="/src/pkg/target/nats_client.go?s=1473:1518#L49">GetNATSClientNoJSON</a></h2>
+			<pre>func GetNATSClientNoJSON() *<a href="/pkg/github.com/nats-io/nats/">nats</a>.<a href="/pkg/github.com/nats-io/nats/#EncodedConn">EncodedConn</a></pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="GetRowColumn">func <a href="/src/pkg/target/db.go?s=4762:4844#L91">GetRowColumn</a></h2>
+			<pre>func GetRowColumn(table <a href="/pkg/builtin/#string">string</a>, id <a href="/pkg/builtin/#string">string</a>, column <a href="/pkg/builtin/#string">string</a>) (output <a href="/pkg/builtin/#string">string</a>, err <a href="/pkg/builtin/#bool">bool</a>)</pre>
+			<p>
+get a column&#39;s data by either id, or token if is not empty
+returns:
+</p>
+<pre>id - UUID
+column - list of columns separated by ,
+output - column data for the user
+err - true if an error has occured
+</pre>
+
+			
+			
+
+		
+			
+			
+			<h2 id="GetRowColumnNE">func <a href="/src/pkg/target/db.go?s=5076:5143#L102">GetRowColumnNE</a></h2>
+			<pre>func GetRowColumnNE(table <a href="/pkg/builtin/#string">string</a>, id <a href="/pkg/builtin/#string">string</a>, column <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#string">string</a></pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="GetRowColumnWhere">func <a href="/src/pkg/target/db.go?s=5205:5303#L107">GetRowColumnWhere</a></h2>
+			<pre>func GetRowColumnWhere(table <a href="/pkg/builtin/#string">string</a>, wherecolumn <a href="/pkg/builtin/#string">string</a>, where <a href="/pkg/builtin/#string">string</a>, column <a href="/pkg/builtin/#string">string</a>) (output <a href="/pkg/builtin/#string">string</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="GetTokenFromID">func <a href="/src/pkg/target/usermanager.go?s=2165:2203#L72">GetTokenFromID</a></h2>
+			<pre>func GetTokenFromID(ID <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#string">string</a></pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="InitMailer">func <a href="/src/pkg/target/mail.go?s=146:163#L1">InitMailer</a></h2>
+			<pre>func InitMailer()</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="InitUserManager">func <a href="/src/pkg/target/usermanager.go?s=221:243#L3">InitUserManager</a></h2>
+			<pre>func InitUserManager()</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="IsUserLoggedIn">func <a href="/src/pkg/target/usermanager.go?s=4063:4099#L132">IsUserLoggedIn</a></h2>
+			<pre>func IsUserLoggedIn(ID <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#bool">bool</a></pre>
+			<p>
+returns true if a user is logged in
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="JSONGetIDColumn">func <a href="/src/pkg/target/GenericJSON.go?s=633:733#L17">JSONGetIDColumn</a></h2>
+			<pre>func JSONGetIDColumn(table <a href="/pkg/builtin/#string">string</a>, idd interface{}, sqlcolumn <a href="/pkg/builtin/#string">string</a>, typed <a href="/pkg/builtin/#string">string</a>) (response []<a href="/pkg/builtin/#byte">byte</a>)</pre>
+			<p>
+Retrieves a user&#39;s information based on id
+AuthFunc: Function to call to get information
+idd: interface with id value
+typed: JSON return &#34;Type&#34;
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="JSONPackageMessage">func <a href="/src/pkg/target/GenericJSON.go?s=2089:2170#L62">JSONPackageMessage</a></h2>
+			<pre>func JSONPackageMessage(successmsg <a href="/pkg/builtin/#string">string</a>, msg <a href="/pkg/builtin/#string">string</a>, err <a href="/pkg/builtin/#bool">bool</a>) (response []<a href="/pkg/builtin/#byte">byte</a>)</pre>
+			<p>
+JSON packaging a message that does &#34;Failure&#34;, success
+Inputs:
+</p>
+<pre>successmsg - user&#39;s id to be sent
+msg - taken in from the request, used for an error
+err - error from authlogin
+</pre>
+<p>
+Outputs:
+</p>
+<pre>response - JSON response to the RESTful client
+</pre>
+
+			
+			
+
+		
+			
+			
+			<h2 id="JSONtoMap">func <a href="/src/pkg/target/GenericJSON.go?s=172:236#L1">JSONtoMap</a></h2>
+			<pre>func JSONtoMap(JSON <a href="/pkg/builtin/#string">string</a>) (out map[<a href="/pkg/builtin/#string">string</a>]interface{}, err <a href="/pkg/builtin/#bool">bool</a>)</pre>
+			<p>
+convert a json string to a string map interface
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="ListenToLogin">func <a href="/src/pkg/target/usermanager.go?s=1642:1675#L52">ListenToLogin</a></h2>
+			<pre>func ListenToLogin(f interface{})</pre>
+			<p>
+listens for a user login
+usage: ListenToLogin(func (ID string){/*stuff*})
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="ListenToLogout">func <a href="/src/pkg/target/usermanager.go?s=1797:1831#L58">ListenToLogout</a></h2>
+			<pre>func ListenToLogout(f interface{})</pre>
+			<p>
+listens for a user logout
+usage: ListenToLogout(func (ID string){/*stuff*})
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="ListenToRegister">func <a href="/src/pkg/target/usermanager.go?s=1958:1994#L64">ListenToRegister</a></h2>
+			<pre>func ListenToRegister(f interface{})</pre>
+			<p>
+listens for a user register
+usage: ListenToRegister(func (ID string){/*stuff*})
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="LogToFile">func <a href="/src/pkg/target/FileLogger.go?s=105:148#L2">LogToFile</a></h2>
+			<pre>func LogToFile(fileloc <a href="/pkg/builtin/#string">string</a>, dofile <a href="/pkg/builtin/#bool">bool</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="OnClose">func <a href="/src/pkg/target/common.go?s=71:85#L1">OnClose</a></h2>
+			<pre>func OnClose()</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="OnExit">func <a href="/src/pkg/target/common.go?s=298:311#L9">OnExit</a></h2>
+			<pre>func OnExit()</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="OpenDB">func <a href="/src/pkg/target/db.go?s=319:399#L9">OpenDB</a></h2>
+			<pre>func OpenDB(db_user <a href="/pkg/builtin/#string">string</a>, db_pass <a href="/pkg/builtin/#string">string</a>, db_schema <a href="/pkg/builtin/#string">string</a>, db_connect <a href="/pkg/builtin/#string">string</a>)</pre>
+			<p>
+open up a link to the database
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="OpenDBCFG">func <a href="/src/pkg/target/db.go?s=1030:1046#L38">OpenDBCFG</a></h2>
+			<pre>func OpenDBCFG()</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="PassSum">func <a href="/src/pkg/target/utils.go?s=476:508#L14">PassSum</a></h2>
+			<pre>func PassSum(pass <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#string">string</a></pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="PreSum">func <a href="/src/pkg/target/utils.go?s=890:921#L24">PreSum</a></h2>
+			<pre>func PreSum(pass <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#string">string</a></pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="ProfilingRouterHandler">func <a href="/src/pkg/target/Profiling.go?s=97:144#L1">ProfilingRouterHandler</a></h2>
+			<pre>func ProfilingRouterHandler(router *<a href="/pkg/github.com/gorilla/mux/">mux</a>.<a href="/pkg/github.com/gorilla/mux/#Router">Router</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="RESTFulGet">func <a href="/src/pkg/target/RESTFul.go?s=294:394#L3">RESTFulGet</a></h2>
+			<pre>func RESTFulGet(w <a href="/pkg/net/http/">http</a>.<a href="/pkg/net/http/#ResponseWriter">ResponseWriter</a>, r *<a href="/pkg/net/http/">http</a>.<a href="/pkg/net/http/#Request">Request</a>, table <a href="/pkg/builtin/#string">string</a>, column <a href="/pkg/builtin/#string">string</a>, jsontag <a href="/pkg/builtin/#string">string</a>)</pre>
+			<p>
+func(w http.ResponseWriter, r *http.Request){common.RESTFulGet(w, r, &#34;account&#34;, &#34;username&#34;, &#34;Username&#34;)}
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="RESTFulGetMux">func <a href="/src/pkg/target/RESTFul.go?s=718:834#L13">RESTFulGetMux</a></h2>
+			<pre>func RESTFulGetMux(w <a href="/pkg/net/http/">http</a>.<a href="/pkg/net/http/#ResponseWriter">ResponseWriter</a>, r *<a href="/pkg/net/http/">http</a>.<a href="/pkg/net/http/#Request">Request</a>, muxr <a href="/pkg/builtin/#string">string</a>, table <a href="/pkg/builtin/#string">string</a>, column <a href="/pkg/builtin/#string">string</a>, jsontag <a href="/pkg/builtin/#string">string</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="RESTFulGetPut">func <a href="/src/pkg/target/RESTFul.go?s=2410:2510#L47">RESTFulGetPut</a></h2>
+			<pre>func RESTFulGetPut(router *<a href="/pkg/github.com/gorilla/mux/">mux</a>.<a href="/pkg/github.com/gorilla/mux/#Router">Router</a>, prefix <a href="/pkg/builtin/#string">string</a>, route <a href="/pkg/builtin/#string">string</a>, dbcolumn <a href="/pkg/builtin/#string">string</a>, JSONkey <a href="/pkg/builtin/#string">string</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="RESTFulGetPutMux">func <a href="/src/pkg/target/RESTFul.go?s=1924:2058#L42">RESTFulGetPutMux</a></h2>
+			<pre>func RESTFulGetPutMux(router *<a href="/pkg/github.com/gorilla/mux/">mux</a>.<a href="/pkg/github.com/gorilla/mux/#Router">Router</a>, mux <a href="/pkg/builtin/#string">string</a>, byIDcolumn <a href="/pkg/builtin/#string">string</a>, prefix <a href="/pkg/builtin/#string">string</a>, route <a href="/pkg/builtin/#string">string</a>, dbcolumn <a href="/pkg/builtin/#string">string</a>, JSONkey <a href="/pkg/builtin/#string">string</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="RESTFulPut">func <a href="/src/pkg/target/RESTFul.go?s=556:658#L9">RESTFulPut</a></h2>
+			<pre>func RESTFulPut(w <a href="/pkg/net/http/">http</a>.<a href="/pkg/net/http/#ResponseWriter">ResponseWriter</a>, r *<a href="/pkg/net/http/">http</a>.<a href="/pkg/net/http/#Request">Request</a>, table <a href="/pkg/builtin/#string">string</a>, column <a href="/pkg/builtin/#string">string</a>, jsonindex <a href="/pkg/builtin/#string">string</a>)</pre>
+			<p>
+func(w http.ResponseWriter, r *http.Request){common.RESTFulPut(w, r, &#34;profile&#34;, &#34;email&#34;, &#34;Email&#34;)}
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="RESTFulPutMux">func <a href="/src/pkg/target/RESTFul.go?s=1136:1253#L23">RESTFulPutMux</a></h2>
+			<pre>func RESTFulPutMux(w <a href="/pkg/net/http/">http</a>.<a href="/pkg/net/http/#ResponseWriter">ResponseWriter</a>, r *<a href="/pkg/net/http/">http</a>.<a href="/pkg/net/http/#Request">Request</a>, mux <a href="/pkg/builtin/#string">string</a>, table <a href="/pkg/builtin/#string">string</a>, column <a href="/pkg/builtin/#string">string</a>, jsonindex <a href="/pkg/builtin/#string">string</a>)</pre>
+			<p>
+func(w http.ResponseWriter, r *http.Request){common.RESTFulPut(w, r, &#34;profile&#34;, &#34;email&#34;, &#34;Email&#34;)}
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="RowExists">func <a href="/src/pkg/target/db.go?s=5570:5628#L118">RowExists</a></h2>
+			<pre>func RowExists(ID <a href="/pkg/builtin/#string">string</a>, COL <a href="/pkg/builtin/#string">string</a>, PREFIX <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#bool">bool</a></pre>
+			<p>
+ID is a HEX value of a binary number
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="RowExists2">func <a href="/src/pkg/target/db.go?s=5938:6022#L131">RowExists2</a></h2>
+			<pre>func RowExists2(ID <a href="/pkg/builtin/#string">string</a>, COL <a href="/pkg/builtin/#string">string</a>, ID2 <a href="/pkg/builtin/#string">string</a>, COL2 <a href="/pkg/builtin/#string">string</a>, PREFIX <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#bool">bool</a></pre>
+			<p>
+ID is a HEX value of a binary number
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="SecureConnector">func <a href="/src/pkg/target/nats_client.go?s=750:803#L24">SecureConnector</a></h2>
+			<pre>func SecureConnector(serverURLs []<a href="/pkg/builtin/#string">string</a>) *<a href="/pkg/github.com/nats-io/nats/">nats</a>.<a href="/pkg/github.com/nats-io/nats/#Conn">Conn</a></pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="SetConfig">func <a href="/src/pkg/target/Config.go?s=577:607#L26">SetConfig</a></h2>
+			<pre>func SetConfig(fileloc <a href="/pkg/builtin/#string">string</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="StartNATSClient">func <a href="/src/pkg/target/nats_client.go?s=349:437#L8">StartNATSClient</a></h2>
+			<pre>func StartNATSClient(servers []<a href="/pkg/builtin/#string">string</a>, username <a href="/pkg/builtin/#string">string</a>, pass <a href="/pkg/builtin/#string">string</a>) *<a href="/pkg/github.com/nats-io/nats/">nats</a>.<a href="/pkg/github.com/nats-io/nats/#EncodedConn">EncodedConn</a></pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="StartNATSClientCFG">func <a href="/src/pkg/target/nats_client.go?s=614:639#L18">StartNATSClientCFG</a></h2>
+			<pre>func StartNATSClientCFG()</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="TestJSONInput">func <a href="/src/pkg/target/GenericJSON.go?s=2807:2876#L88">TestJSONInput</a></h2>
+			<pre>func TestJSONInput(data interface{}, msg <a href="/pkg/builtin/#string">string</a>) (response interface{})</pre>
+			<p>
+Tests if an input, such as &#34;Username&#34; is given through
+the client&#39;s input JSON request.
+Inputs:
+</p>
+<pre>data - data to test if not null
+msg - output message in JSON response
+</pre>
+<p>
+Outputs:
+</p>
+<pre>response - JSON response to the RESTful client
+</pre>
+
+			
+			
+
+		
+			
+			
+			<h2 id="UserLoginCheck">func <a href="/src/pkg/target/usermanager.go?s=2389:2429#L79">UserLoginCheck</a></h2>
+			<pre>func UserLoginCheck(loginmsg *<a href="#AuthLogin">AuthLogin</a>)</pre>
+			<p>
+Check if the user is logged into this server,
+</p>
+<pre>if not, add in... else update TTL
+</pre>
+
+			
+			
+
+		
+			
+			
+			<h2 id="UserLogoutCheck">func <a href="/src/pkg/target/usermanager.go?s=3065:3096#L98">UserLogoutCheck</a></h2>
+			<pre>func UserLogoutCheck(ID <a href="/pkg/builtin/#string">string</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="UserRegisterCheck">func <a href="/src/pkg/target/usermanager.go?s=3439:3472#L111">UserRegisterCheck</a></h2>
+			<pre>func UserRegisterCheck(ID <a href="/pkg/builtin/#string">string</a>)</pre>
+			
+			
+			
+
+		
+		
+			
+			
+			<h2 id="Admin">type <a href="/src/pkg/target/JSONTypes.go?s=606:878#L17">Admin</a></h2>
+			<pre>type Admin struct {
+    UUID         <a href="/pkg/builtin/#string">string</a> <span class="comment">// UUID HEX for the admin</span>
+    Username     <a href="/pkg/builtin/#string">string</a>
+    IP           <a href="/pkg/builtin/#string">string</a> <span class="comment">// IP address for the admin</span>
+    IDToken      <a href="/pkg/builtin/#string">string</a>
+    IsAdmin      <a href="/pkg/builtin/#string">string</a> <span class="comment">// Verified admin</span>
+    UserLevel    <a href="/pkg/builtin/#string">string</a> <span class="comment">// plaintext userlevel</span>
+    UserLevelGen <a href="/pkg/builtin/#string">string</a> <span class="comment">// Generated HEX userlevel</span>
+}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="AuthLogin">type <a href="/src/pkg/target/JSONTypes.go?s=500:602#L11">AuthLogin</a></h2>
+			<pre>type AuthLogin struct {
+    ID              <a href="/pkg/builtin/#string">string</a>
+    Token           <a href="/pkg/builtin/#string">string</a> <span class="comment">// token for the user</span>
+    HashedAuthLevel <a href="/pkg/builtin/#string">string</a>
+}</pre>
+			<p>
+pushed out from the auth server when somebody has logged in
+on the &#34;Auth.Login&#34; channel on NATS
+</p>
+
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="AuthVerifyLevelMsg">type <a href="/src/pkg/target/JSONTypes.go?s=144:282#L1">AuthVerifyLevelMsg</a></h2>
+			<pre>type AuthVerifyLevelMsg struct {
+    ID     <a href="/pkg/builtin/#string">string</a>
+    Wanted <a href="/pkg/builtin/#string">string</a> <span class="comment">// &#34;User&#34;,&#34;Administrator&#34;</span>
+    Hashed <a href="/pkg/builtin/#string">string</a> <span class="comment">// Value given from AuthLogin</span>
+}</pre>
+			<p>
+Sent to the Auth Server from any server to determine the level
+</p>
+
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="AuthVerifyLevelRetMsg">type <a href="/src/pkg/target/JSONTypes.go?s=323:392#L4">AuthVerifyLevelRetMsg</a></h2>
+			<pre>type AuthVerifyLevelRetMsg struct {
+    ID         <a href="/pkg/builtin/#string">string</a>
+    Authorized <a href="/pkg/builtin/#bool">bool</a>
+}</pre>
+			<p>
+return message from Verify Level
+</p>
+
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Authentication">type <a href="/src/pkg/target/JSONTypes.go?s=1036:1119#L34">Authentication</a></h2>
+			<pre>type Authentication struct {
+    Type  <a href="/pkg/builtin/#string">string</a>
+    ID    <a href="/pkg/builtin/#string">string</a>
+    Token <a href="/pkg/builtin/#string">string</a>
+}</pre>
+			<p>
+used for JSON output from AuthLogin
+</p>
+
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="CommandExec">type <a href="/src/pkg/target/CommandScanner.go?s=190:290#L2">CommandExec</a></h2>
+			<pre>type CommandExec struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="CommandScanner">type <a href="/src/pkg/target/CommandScanner.go?s=120:187#L1">CommandScanner</a></h2>
+			<pre>type CommandScanner struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="InitCommandScanner">func <a href="/src/pkg/target/CommandScanner.go?s=297:338#L8">InitCommandScanner</a></h3>
+				<pre>func InitCommandScanner() *<a href="#CommandScanner">CommandScanner</a></pre>
+				
+				
+			        
+			
+
+			
+				
+				<h3 id="CommandScanner.AddCommand">func (CommandScanner) <a href="/src/pkg/target/CommandScanner.go?s=1293:1361#L52">AddCommand</a></h3>
+				<pre>func (c <a href="#CommandScanner">CommandScanner</a>) AddCommand(com <a href="/pkg/builtin/#string">string</a>, funct func([]<a href="/pkg/builtin/#string">string</a>))</pre>
+				
+				
+				
+			        
+			
+				
+				<h3 id="CommandScanner.ScanLoop">func (CommandScanner) <a href="/src/pkg/target/CommandScanner.go?s=731:765#L25">ScanLoop</a></h3>
+				<pre>func (c <a href="#CommandScanner">CommandScanner</a>) ScanLoop()</pre>
+				
+				
+				
+			        
+			
+		
+			
+			
+			<h2 id="Configuration">type <a href="/src/pkg/target/Config.go?s=157:544#L1">Configuration</a></h2>
+			<pre>type Configuration struct {
+    ServerType <a href="/pkg/builtin/#string">string</a>
+
+    DBServer     <a href="/pkg/builtin/#string">string</a>
+    DB           <a href="/pkg/builtin/#string">string</a>
+    DBTable      <a href="/pkg/builtin/#string">string</a>
+    DBLoginTable <a href="/pkg/builtin/#string">string</a>
+    DBUser       <a href="/pkg/builtin/#string">string</a>
+    DBPass       <a href="/pkg/builtin/#string">string</a>
+
+    NATSCluster []<a href="/pkg/builtin/#string">string</a>
+    NATSUser    <a href="/pkg/builtin/#string">string</a>
+    NATSPass    <a href="/pkg/builtin/#string">string</a>
+
+    RESTfulPort <a href="/pkg/builtin/#string">string</a>
+
+    LoginTTL <a href="/pkg/builtin/#int">int</a>
+    MailURL  <a href="/pkg/builtin/#string">string</a>
+    MailKey  <a href="/pkg/builtin/#string">string</a>
+    DoEmail  <a href="/pkg/builtin/#bool">bool</a>
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="GetConfig">func <a href="/src/pkg/target/Config.go?s=792:822#L36">GetConfig</a></h3>
+				<pre>func GetConfig() <a href="#Configuration">Configuration</a></pre>
+				
+				
+			        
+			
+
+			
+		
+			
+			
+			<h2 id="MsgData">type <a href="/src/pkg/target/JSONTypes.go?s=1454:1516#L56">MsgData</a></h2>
+			<pre>type MsgData struct {
+    Type    <a href="/pkg/builtin/#string">string</a>
+    Message <a href="/pkg/builtin/#string">string</a>
+}</pre>
+			<p>
+used for basic JSON output messages
+</p>
+
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="UserLevel">type <a href="/src/pkg/target/JSONTypes.go?s=1170:1265#L41">UserLevel</a></h2>
+			<pre>type UserLevel struct {
+    Type            <a href="/pkg/builtin/#string">string</a>
+    UserLevel       <a href="/pkg/builtin/#string">string</a>
+    HashedUserLevel <a href="/pkg/builtin/#string">string</a>
+}</pre>
+			<p>
+UserLevel JSON used for higher priviledges
+</p>
+
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="UserProfile">type <a href="/src/pkg/target/JSONTypes.go?s=1297:1410#L48">UserProfile</a></h2>
+			<pre>type UserProfile struct {
+    Type      <a href="/pkg/builtin/#string">string</a>
+    RealName  <a href="/pkg/builtin/#string">string</a>
+    LastLogin <a href="/pkg/builtin/#string">string</a>
+    UserLevel <a href="/pkg/builtin/#string">string</a>
+}</pre>
+			<p>
+UserProfile JSON output
+</p>
+
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ValueX">type <a href="/src/pkg/target/JSONTypes.go?s=1544:1603#L62">ValueX</a></h2>
+			<pre>type ValueX struct {
+    Type  <a href="/pkg/builtin/#string">string</a>
+    Value <a href="/pkg/builtin/#string">string</a>
+}</pre>
+			<p>
+Generic JSON output
+</p>
+
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="VerifyAdmin">type <a href="/src/pkg/target/JSONTypes.go?s=883:991#L27">VerifyAdmin</a></h2>
+			<pre>type VerifyAdmin struct {
+    IP       <a href="/pkg/builtin/#string">string</a>
+    Username <a href="/pkg/builtin/#string">string</a>
+    Password <a href="/pkg/builtin/#string">string</a> <span class="comment">// pre-hashed hashed password</span>
+}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+	
+	
+		<h2 id="pkg-subdirectories">Subdirectories</h2>
+	
+	<table class="dir">
+	<tr>
+	<th>Name</th>
+	<th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+	<th style="text-align: left; width: auto">Synopsis</th>
+	</tr>
+	
+		<tr>
+		<td><a href="..">..</a></td>
+		</tr>
+	
+	
+		
+			<tr>
+			<td class="name"><a href="Administration/">Administration</a></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td style="width: auto"></td>
+			</tr>
+		
+	
+		
+			<tr>
+			<td class="name"><a href="Auth/">Auth</a></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td style="width: auto"></td>
+			</tr>
+		
+	
+		
+			<tr>
+			<td class="name"><a href="Comment/">Comment</a></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td style="width: auto"></td>
+			</tr>
+		
+	
+		
+			<tr>
+			<td class="name"><a href="Feedback/">Feedback</a></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td style="width: auto"></td>
+			</tr>
+		
+	
+		
+			<tr>
+			<td class="name"><a href="Feeds/">Feeds</a></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td style="width: auto"></td>
+			</tr>
+		
+	
+		
+			<tr>
+			<td class="name"><a href="Profile/">Profile</a></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td style="width: auto"></td>
+			</tr>
+		
+	
+		
+			<tr>
+			<td class="name"><a href="Search/">Search</a></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td style="width: auto"></td>
+			</tr>
+		
+	
+		
+			<tr>
+			<td class="name"><a href="Video/">Video</a></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td style="width: auto"></td>
+			</tr>
+		
+	
+		
+			<tr>
+			<td class="name"><a href="main/">main</a></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td style="width: auto"></td>
+			</tr>
+		
+	
+	</table>
+	
+

@@ -1,0 +1,23 @@
+{
+	"ServerType": "Video",
+	"_Types": "Admin,Auth,Comment,Feedback,Feeds,Profile,Search,Video",
+	
+	"DBServer": "127.0.0.1:3306",
+	"DB": "go_videodb",
+	"DBTable": "videos",
+	"DBLoginTable": "login",
+	"DBUser": "go",
+	"DBPass": "E]D2DB\"V=ex;?8$v&Aze",
+	
+	"NATSCluster": ["nats://a3cqEAdz1om:GOXxG3HamsCZtu2LlEW@sync1i:8080"],
+	"NATSUser": "a3cqEAdz1om",
+	"NATSPass": "GOXxG3HamsCZtu2LlEW",
+	
+	"RESTfulPort": "6107",
+	
+	"_Comment":"Auth Server Only",
+	"LoginTTL": 3600,
+	"MailURL":"",
+	"MailKey":"",
+	"DoEmail":false
+}
