@@ -1,0 +1,49 @@
+html,body {height:100%;margin:0;padding:0;overflow:hidden;user-select: none;background-color:black;}
+
+.allarea {height:100%; width:100%; overflow:hidden;}
+
+/* Top Bar */
+.topbar {width:100%;height:25px;background:linear-gradient(#7ADEFF, #00B4F0);position:absolute;z-index:1}
+#toplogo {width:60px;background-image:url(../img/logo_small.png);background-repeat:no-repeat;background-position: center;}
+.topspace {}
+.topsearch {width:100px;}
+#topmenu {width:30px;background-image:url(../img/menu.gif);background-repeat:no-repeat;background-position: center; }
+#topmenu:hover {width:30px;background:linear-gradient(#4dd2ff, #0099cc);background-image:url(../img/menu.gif);background-repeat:no-repeat;background-position: center; }
+
+/* content */
+#content {height:100%; width:100%; overflow:hidden;box-sizing:border-box;}
+#map {height:100%;}
+.nowidth {width:0px;}
+
+/* Floating sidebar */
+#sidebar {height:100%; width:5px; background: linear-gradient(to right, #737373, #4d4d4d);position:absolute;top:25px;right:-1px;float:right;clear:both;z-index:99;}
+.sidebar-headers {width:70px;color:gainsboro;}
+.sidebar-headers .sidebar-item {width:70px;}
+.sidebar-headers .sidebar-item:hover {width:70px;color:white; background-color:#838383}
+.sidebar-headers .sidebar-selected {width:70px; background-color:#232323;}
+.sidebar-space {height:100%;}
+#sidebar-content {background-color:white;}
+
+/* custom window, jQuery is overused */
+.FloatingWindow {position:absolute; width:100px;height:100px; z-index:2;background-color:white;}
+.WindowHeader {width:100%;background-color:#00B2F0;color:white;cursor:move;}
+.WindowHeaderX {width:20px;cursor:pointer;}
+
+.IconYoutube {height:30px;}
+.IconVimeo {height:20px;}
+
+/* Text Representations */
+.Link {color:blue;cursor:pointer;}
+
+/* */
+#YoutubeSearchBox {width:100%;height:100%;overflow:auto;}
+#YoutubeSearchBox table {width:100%;}
+#YoutubeSearchBox table tr:hover {background:gainsboro;cursor:pointer;}
+#VidData {background:white;}
+
+
+/* Social Media */
+.fa {width:30px;height:30px;display:inline-block;background-repeat:no-repeat;background-size: 30px 30px;}
+.fa-facebook {background-image:url(https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/svgs/fi-social-facebook.svg);}
+.fa-twitter {background-image:url(https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/svgs/fi-social-twitter.svg);}
+.fa-instagram {background-image:url(https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/svgs/fi-social-instagram.svg);}

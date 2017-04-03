@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+	<head>
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+		<script async defer type="text/javascript" src="js/main.js"></script>
+		<script async defer type="text/javascript" src="js/window.js"></script>
+		<script type="text/javascript" src="js/map.js" /></script>
+		<script async defer type="text/javascript" src="js/cookie.js"></script>
+		<script async defer type="text/javascript" src="js/net.js"></script>
+		<script async defer type="text/javascript" src="js/ui.js"></script>
+		<script async defer type="text/javascript" src="js/google.js"></script>
+		<script async defer type="text/javascript" src="js/vimeo.js"></script>
+		<script async defer type="text/javascript" src="js/Video.js"></script>
+		<script async defer type="text/javascript" src="js/sidebar_content.js"></script>
+		<script async defer src="https://apis.google.com/js/client.js?onload=googleApiClientReady"></script>
+		<!-- Place key here for google maps -->
+		<script src="https://maps.googleapis.com/maps/api/js?v=3&key=&libraries=visualization&callback=initMap" async defer></script>
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+	</head>
+	<body onload="if(typeof onLoad == 'function') onLoad();">
+		<table class="topbar" border="0" cellpadding="0" cellspacing="0">
+			<tr>
+				<td id="toplogo"></td>
+				<td class="topspace">&nbsp;</td>
+				<td class="topsearch"></td>
+				<td id="topmenu"></td>
+			</tr>
+		</table>
+		<div id="content">
+				<!-- Google Maps extension -->
+				<div id="map"></div>
+		</div>
+		<table id="sidebar" cellspacing=0>
+			<tr>
+				<td class="sidebar-headers" align=center valign=top>
+					<div id="sb0" onclick="sidebarItem(0,this);" class="sidebar-selected"><img src="img/feeds.png" height=40 width=35 /><center>Feeds</center></div>
+					<div id="sb1" onclick="sidebarItem(1,this);" class="sidebar-item"><img src="img/recent.png" height=40 width=35 /><center>Recent</center></div>
+					<div id="sb2" onclick="sidebarItem(2,this);" class="sidebar-item"><img src="img/account.png" height=40 width=35 /><center>Account</center></div>
+					
+					<br /><hr />
+					<div id="sb3" onclick="sidebarItem(3,this);" class="sidebar-item"><img src="img/feedback.png" height=40 width=35 /><center>Feedback</center></div>
+					<div id="sb4" onclick="sidebarItem(4,this);" class="sidebar-item"><img src="img/feedback.png" height=40 width=35 /><center>About</center></div>
+				</td>
+				<td id="sidebar-content" valign=top></td>
+			</tr>
+		</table>
+	</body>
+</html>
