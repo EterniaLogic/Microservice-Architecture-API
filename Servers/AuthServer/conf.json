@@ -18,6 +18,6 @@
 	"_Comment":"Auth Server Only",
 	"LoginTTL": 3600,
 	"MailURL":"api.site.com",
-	"MailKey":"key-d66035a4c33f35a0da840db70ce8a5e8",
+	"MailKey":"key-xx",
 	"DoEmail":true
 }

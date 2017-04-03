@@ -1,7 +1,7 @@
 package common
 
 import "github.com/mailgun/mailgun-go"
-// key-d66035a4c33f35a0da840db70ce8a5e8
+// key-xx
 // api.site.com
 
 var mg mailgun.Mailgun;
