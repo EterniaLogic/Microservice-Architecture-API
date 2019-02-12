@@ -2,11 +2,11 @@
 
 Author: Brent Clancy
 
-Copyright (C) Brent Clancy 2017
+Copyright (C) Brent Clancy 2019
 
 #### Documentation:
 
-https://github.com/EterniaLogic/Microservice-Architecture-API/blob/master/Documentation/README.md)**
+https://github.com/EterniaLogic/Microservice-Architecture-API/blob/master/Documentation/README.md
 
 
 Ports:
